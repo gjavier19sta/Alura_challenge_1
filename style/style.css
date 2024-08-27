@@ -1,9 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+:root {
+    --background--principal: #F3F5FC;
+    --fuente--principal: "Inter", sans-serif;
+    --Color-fuente-principal: #0A3871;
+    --backGround-textArea: #F3F5FC ;
+
+}
+/*font-sizq "em" es realtivo a valor en pixeles que tiene la etiqueta padre o sea que si la etiqueta padre tiene el font-sizq = 10px el font-size= 2em de la
+etiqueta hijo será igual a 10px
+ font-size rem es relativo a una fuente fija de 16px entonces es mejor utilizar rem en lugar de em para no tener que calcular el tamaños de la fuente sobre
+ todo en los casos que la fuente hija esta anidada y tiene varios padres con sus respectivos em
+*/
+
+/*Resets css*/
 * {
     padding: 0;
     margin:0;
-}
+}/* fin resets css*/
 
 header {
     padding: 1% 3%;
@@ -12,45 +26,72 @@ header {
 body{
     height: 100vh;
     box-sizing: border-box;
-    background-color: #F3F5FC;
+    background-color: var(--background--principal);
     color: #0A3871;
 }
 
 .principal {
-    margin: 10% 15%;
+    margin: 1% 5% ;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 200px;
 }
 
 .principal__contenido{
-    width: 615px;
+ /*   margin: 5% 1% 2% 2%;   */     /*los porcentajes singifican el prero es arriba, derecha, abajo, izquierda. en el sentido horario*/
+    height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    align-items: center;
+    gap: 20px;   /* esto sería los pixeles entre filas y columas o si se pone ambos parametros primero filas despes columnas osea primer espacio horizontal y despues espaacio vertical */
 }
+/*
+.principal__inputs{
+    display: flex;
+    justify-content:center
 
-.principal__contenido__titulo{
+} */
+
+/* .principal__input__titulo{
+    width: 100%;
+    height: 100px;
+    padding: 1px 0px ; */ /*  Cuando solo hay dos, es alto por ancho */
+  /*  border-radius: 20px;
     font-size: 36px;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente--principal);
     font-weight: 400 ;
     font-style: bold;
+} */
+
+.principal__input__textarea{
+    width: 500px;                    /*Ancho*/
+    height: 770px;                   /*Altura*/
+    margin: 0% 0 0% 3%;
+    padding: 0% 0% 0% 0%;
+    border-color: var(--background--principal);
+    border-radius: 20px;
+    background-color: var(--backGround-textAreaf);
+    font-size: 2.25rem;
+    font-family: var(--fuente--principal);
+    font-weight: 400 ;             
+    font-style: bold;
+    color: var(--Color-fuente-principal) ;
+    border: none;
+    outline: none;  /*esto es lo que me muestra un reborde cuando pongo el cursor ahí*/
+
 }
 
-.secundario__contenido__titulo{
-    font-size: 24px;
-    font-family: "Inter", sans-serif;
-    
-}
-
-.secundario__parrafo {
-    font-size: 16px;
-    font-family: "Inter", sans-serif;
+::placeholder{ /*para modificar la el texto del placehoder, se deber hacer con una seudoclase */
+    font-size: 2.25rem;
+    font-family: var(--fuente--principal);
+    font-weight: 400 ;             
+    font-style: bold;
+    color: var(--Color-fuente-principal) ;
 }
 
 .principal__contenido__texto{
-    font-size: 24px;
-    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-family: var(--fuente--principal);
 }
 
 .principal__warning{
@@ -65,6 +106,7 @@ body{
 .principal__enlaces{
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .principal__warning__link{
@@ -72,36 +114,160 @@ body{
     width: 280px;
     text-align: center;
     border-radius: 16px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
     color: #000000;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente--principal);
 }
 
-.principal__button1{
+.principal__button__encriptar{
     background-color: #0A3871;
     width: 280px;
     text-align: center;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
     color: #FFFFFF;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente--principal);
 }
 
-.principal__button2{
+.principal__button_desencriptar{
     background-color: #D8DFE8;
     width: 280px;
     text-align: center;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
     color: #0A3871;
-    font-family: "Inter", sans-serif;
+    font-family: var(--fuente--principal);
 }
+
+.secundario__section{
+    width: 400px;
+    height: 944px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    border-color: var(--background--principal);
+    border-radius: 20px;
+}
+
+.secundario__img_muñeco{
+
+    display: block;
+    margin: 50% auto 10% auto;
+    z-index: 1;
+}
+
+.secundario__div__textos{
+
+    width: 80%;
+    height: 27%;
+}
+
+.secundario__contenido__titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fuente--principal);
+
+    
+}
+
+.secundario__parrafo {
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--fuente--principal);
+}
+
+/*
+.secundario__section2{
+    width: 400px;
+    height: 944px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: start;
+    justify-items: center;
+    justify-content: center;
+    border-color: var(--background--principal);
+    border-radius: 20px;
+    row-gap: 30px;
+}
+.secundario__div__textos2{
+
+} */
+
+.secundario__outputextarea{
+    width: 350px;                    /*Ancho*/
+    height: 770px;                   /*Altura*/
+    margin: 0% 0 0% 0%;
+    padding: 0% 0% 0% 0%;
+    border-color: var(--background--principal);
+    border-radius: 20px;
+    background-color: var(--backGround-textAreaf);
+    font-size: 2.25rem;
+    font-family: var(--fuente--principal);
+    font-weight: 400 ;             
+    font-style: bold;
+    color: var(--Color-fuente-principal) ;
+    border: none;
+    outline: none;  /*esto es lo que me muestra un reborde cuando pongo el cursor ahí*/
+}
+
+.secundario__button__copiar{
+    display: none;
+    background-color: #FFFFFF;
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    margin-bottom: 9%;
+    text-decoration: none;
+    color: #0A3871; 
+    font-family: var(--fuente--principal);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1%;
+    padding: 0.5%;
+    background-color: lightblue;
+    font-size: 1rem;
+    color:#000000;
+}
+/* esta seccion es para  la responsibidad adaptabilidad a dispositivos diferentes */
+/*
+@media (max-width: 1200px) {
+
+    .header{
+         padding: 10%;  
+    }
+    .header__menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+    
+}
+    */

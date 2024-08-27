@@ -13,30 +13,37 @@
         <img src="./assets/Logo.png" alt="Logo alura">
     </header>
     <main class="principal">
-        <section class="principal__contenido">
-            <h1 class="principal__contenido__titulo">
-                Ingrese el texto aqui 
-            </h1>
-            <div1 class="principal__warning">
-                <p class="principal__contenido__texto"> 
-                    <img class="principal__warning__icono" src="./assets/bi_exclamation-circle-fill.png" alt="simbolo atención ">
-                    Solo letras minúsculas y sin acentos
-                </p>
-            </div1>  
+   <!--     <form class="principal" action="" method="post"> -->
+            <section class="principal__contenido">
+                <div1 cass="principal__inputs">
+                    <textarea class="principal__input__textarea" id="inputText" placeholder="Ingrese el texto aqui"></textarea>          
+                </div1>
                 
-            <div2 class="principal__enlaces">
-                <a class="principal__button1" href="instagram/">Encriptar</a>
-                <a class="principal__button2" href="github/">Desencriptar</a>
-            </div2>               
-        </section>
-        <section>
-            <img src="./assets/Muñeco.png" alt="Foto de un muñeco que ">
-            <h1 class="secundario__contenido__titulo">
-                Ningún mensaje fue encontrado
-            </h1>
-            <p class="secundario__parrafo">Ingrese texto que desea encriptar o desncriptar</p>
-        </section>
+                <div2 class="principal__warning">
+                    <p class="principal__contenido__texto"> 
+                        <img class="principal__warning__icono" src="./assets/bi_exclamation-circle-fill.png" alt="simbolo atención ">
+                        Solo letras minúsculas y sin acentos
+                    </p>
+                </div2>  
+                    
+                <div3 class="principal__enlaces">
+                    <button class="principal__button__encriptar" id="buttonencriptar" onclick="encriptarTexto()">Encriptar</button>
+                    <button class="principal__button_desencriptar" id="buttondesencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+                </div3>               
+
+            </section>
+            <section class="secundario__section" >
+                <img class="secundario__img_muñeco" src="./assets/Muñeco.png" alt="Foto de un muñeco que ">
+                <div class="secundario__div__textos">
+                    <h1 class="secundario__contenido__titulo" id="h1outputText">Ningún mensaje fue encontrado</h1>
+                    <p class="secundario__parrafo" id="poutputText">Ingrese texto que desea encriptar o desncriptar</p>
+                </div>
+                <button class="secundario__button__copiar" onclick="copiarTexto()">Copiar</button> 
+            </section>    
+        <!--/form-->
     </main>
-    <footer></footer>
+    <footer> Javier Aguilar</footer>
+
+    <script src="./js/app.js"></script>
 </body>
 </html>

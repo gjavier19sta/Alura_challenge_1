@@ -55,7 +55,7 @@ function encriptarTexto() {
     muneco.style.display = "none";    
     // Mostrar el botón Copiar
     const botonCopiar = document.querySelector(".secundario__button__copiar");
-    botonCopiar.style.display = "block";
+    botonCopiar.style.display = "flex";
 
 }
 
@@ -91,7 +91,7 @@ function desencriptarTexto() {
     muneco.style.display = "none";
     //mostar el boton copiar
     const botonCopiar = document.querySelector(".secundario__button__copiar");
-    botonCopiar.style.display = "block";
+    botonCopiar.style.display = "flex";
 
 }
 
@@ -106,7 +106,7 @@ function copiarTexto2() {
 function copiarTexto() {
     const output = document.getElementById("h1outputText").textContent;
 //    output.focus(); // Enfoca el textarea (opcional en este caso)
-    const texto = output; // Obtén el contenido del textarea
+    const texto = output; // Obtiene el contenido del textarea
     navigator.clipboard.writeText(texto) // Copia el contenido al portapapeles
         .then(() => {
             alert("Texto copiado al portapapeles.");

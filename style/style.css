@@ -45,23 +45,6 @@ body{
     align-items: center;
     gap: 20px;   /* esto sería los pixeles entre filas y columas o si se pone ambos parametros primero filas despes columnas osea primer espacio horizontal y despues espaacio vertical */
 }
-/*
-.principal__inputs{
-    display: flex;
-    justify-content:center
-
-} */
-
-/* .principal__input__titulo{
-    width: 100%;
-    height: 100px;
-    padding: 1px 0px ; */ /*  Cuando solo hay dos, es alto por ancho */
-  /*  border-radius: 20px;
-    font-size: 36px;
-    font-family: var(--fuente--principal);
-    font-weight: 400 ;
-    font-style: bold;
-} */
 
 .principal__input__textarea{
     width: 500px;                    /*Ancho*/
@@ -96,6 +79,7 @@ body{
 
 .principal__warning{
     display: flex;
+    flex-direction: column;
  /*   justify-content: space-between; */   
 }
 
@@ -163,7 +147,7 @@ body{
 
 .secundario__img_muñeco{
 
-    display: block;
+    display: flex;
     margin: 50% auto 10% auto;
     z-index: 1;
 }
@@ -188,24 +172,6 @@ body{
     font-family: var(--fuente--principal);
 }
 
-/*
-.secundario__section2{
-    width: 400px;
-    height: 944px;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: start;
-    justify-items: center;
-    justify-content: center;
-    border-color: var(--background--principal);
-    border-radius: 20px;
-    row-gap: 30px;
-}
-.secundario__div__textos2{
-
-} */
 
 .secundario__outputextarea{
     width: 350px;                    /*Ancho*/
@@ -233,9 +199,10 @@ body{
     font-size: 1rem;
     font-weight: 600;
     padding: 21.5px 0;
-    margin-bottom: 9%;
+    margin-bottom: 14%;
     text-decoration: none;
     color: #0A3871; 
+    justify-content: center;
     font-family: var(--fuente--principal);
 }
 
@@ -250,24 +217,172 @@ footer {
     color:#000000;
 }
 /* esta seccion es para  la responsibidad adaptabilidad a dispositivos diferentes */
-/*
-@media (max-width: 1200px) {
 
-    .header{
-         padding: 10%;  
-    }
-    .header__menu{
-        justify-content: center;
-    }
-    .presentacion{
-        flex-direction: column-reverse;
-        padding: 5%;
+@media (max-width: 768px) {
 
+    .principal{
+        margin: 1% 5%;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .principal__contenido {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .presentacion__contenido{
-        width: auto;
+    
+
+    .principal__inputs{
+        height: 100%;
+        width: 100%;
+    }
+
+    .principal__input__textarea {
+        height: 300px;
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        border-color: var(--background--principal);
+        border-radius: 20px;
+        background-color: var(--backGround-textAreaf);
+        font-size: 2.25rem;
+        font-family: var(--fuente--principal);
+        font-weight: 400;
+        color: var(--Color-fuente-principal);
+        border: none;
+        outline: none;
+    }
+
+    .secundario__section{
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        border-color: var(--background--principal);
+        border-radius: 20px;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+
+        }
+
+    .secundario__img_muñeco{
+        display: none;
+        margin: 50% auto 10% auto;
+        z-index: 1;
     }
     
+    .secundario__div__textos{
+        
+    }
+
+    .secundario__button__copiar{
+        display: none;
+        background-color: #FFFFFF;
+        width: 280px;
+        text-align: center;
+        border-radius: 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 21.5px 0;
+        margin-top: 6%;
+        margin-bottom: 3%;
+        text-decoration: none;
+        color: #0A3871;
+        justify-content: center;
+        font-family: var(--fuente--principal);
+    }
 }
-    */
+
+@media (max-width: 376px) {
+
+    .principal{
+        margin: 1% 5%;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .principal__contenido {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .principal__enlaces{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 21px;
+        align-items: center
+    }
+
+    .principal__inputs{
+        height: 100%;
+        width: 100%;
+    }
+
+    .principal__input__textarea {
+        width: 100%;
+        padding: 0% 0% 0% 0%;
+        border-color: var(--background--principal);
+        border-radius: 20px;
+        background-color: var(--backGround-textAreaf);
+        font-size: 2.25rem;
+        font-family: var(--fuente--principal);
+        font-weight: 400;
+        color: var(--Color-fuente-principal);
+        border: none;
+        outline: none;
+    }
+
+    .secundario__section{
+        width: 100%;
+        height: 100%;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        border-color: var(--background--principal);
+        border-radius: 20px;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+
+        }
+
+    .secundario__img_muñeco{
+        display: none;
+        margin: 50% auto 10% auto;
+        z-index: 1;
+    }
+    
+    .secundario__div__textos{
+        
+    }
+
+    .secundario__button__copiar{
+        display: none;
+        background-color: #FFFFFF;
+        width: 280px;
+        text-align: center;
+        border-radius: 16px;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 21.5px 0;
+        margin-top: 6%;
+        margin-bottom: 3%;
+        text-decoration: none;
+        color: #0A3871;
+        justify-content: center;
+        font-family: var(--fuente--principal);
+    }
+}

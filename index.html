@@ -13,7 +13,6 @@
         <img src="./assets/Logo.png" alt="Logo alura">
     </header>
     <main class="principal">
-   <!--     <form class="principal" action="" method="post"> -->
             <section class="principal__contenido">
                 <div1 cass="principal__inputs">
                     <textarea class="principal__input__textarea" id="inputText" placeholder="Ingrese el texto aqui"></textarea>          
@@ -24,13 +23,13 @@
                         <img class="principal__warning__icono" src="./assets/bi_exclamation-circle-fill.png" alt="simbolo atención ">
                         Solo letras minúsculas y sin acentos
                     </p>
+
+                    <div3 class="principal__enlaces">
+                        <button class="principal__button__encriptar" id="buttonencriptar" onclick="encriptarTexto()">Encriptar</button>
+                        <button class="principal__button_desencriptar" id="buttondesencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+                    </div3> 
                 </div2>  
                     
-                <div3 class="principal__enlaces">
-                    <button class="principal__button__encriptar" id="buttonencriptar" onclick="encriptarTexto()">Encriptar</button>
-                    <button class="principal__button_desencriptar" id="buttondesencriptar" onclick="desencriptarTexto()">Desencriptar</button>
-                </div3>               
-
             </section>
             <section class="secundario__section" >
                 <img class="secundario__img_muñeco" src="./assets/Muñeco.png" alt="Foto de un muñeco que ">
@@ -40,7 +39,6 @@
                 </div>
                 <button class="secundario__button__copiar" onclick="copiarTexto()">Copiar</button> 
             </section>    
-        <!--/form-->
     </main>
     <footer> Javier Aguilar</footer>
 
